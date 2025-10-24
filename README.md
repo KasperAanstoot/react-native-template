@@ -12,7 +12,7 @@ navigation drawer.
 - Expo Router file-system routing with a Drawer navigator layout.
 - Material Design 3 UI primitives via React Native Paper.
 - Unified theming between React Native Paper and React Navigation with a system/light/dark preference toggle.
-- TypeScript, ESLint, and sensible defaults to get productive quickly.
+- Modern JavaScript, ESLint, and sensible defaults to get productive quickly.
 
 ## Getting started
 
@@ -27,14 +27,14 @@ Expo CLI will guide you through opening the project on iOS, Android, or the web.
 
 ```text
 app/
-  _layout.tsx                # Wraps the app with theming providers
-  (drawer)/_layout.tsx       # Configures the drawer navigator
-  (drawer)/index.tsx         # Example home screen with Paper components
-  (drawer)/settings.tsx      # Theme preference controls
-  (drawer)/about.tsx         # Shows template resources
+  _layout.jsx                # Wraps the app with theming providers
+  (drawer)/_layout.jsx       # Configures the drawer navigator
+  (drawer)/index.jsx         # Example home screen with Paper components
+  (drawer)/settings.jsx      # Theme preference controls
+  (drawer)/about.jsx         # Shows template resources
 src/
-  components/Screen.tsx      # Convenience wrapper with SafeAreaView
-  providers/ThemeProvider.tsx# Syncs Paper + Navigation themes
+  components/Screen.jsx      # Convenience wrapper with SafeAreaView
+  providers/ThemeProvider.jsx# Syncs Paper + Navigation themes
 ```
 
 Replace the placeholder assets in `assets/` with your own icons and splash screens before releasing your app.
