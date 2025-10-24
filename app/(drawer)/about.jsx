@@ -1,4 +1,3 @@
-import React from 'react';
 import { Linking, StyleSheet } from 'react-native';
 import { List, Text } from 'react-native-paper';
 

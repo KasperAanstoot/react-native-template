@@ -1,4 +1,3 @@
-import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { Button, Card, Text, useTheme } from 'react-native-paper';
 
@@ -33,7 +32,7 @@ export default function HomeScreen() {
           <Card.Content>
             <Text variant="bodyMedium" style={styles.paragraph}>
               Edit{' '}
-              <Text style={{ fontWeight: 'bold', color: theme.colors.primary }}>app/(drawer)/index.tsx</Text>{' '}
+              <Text style={{ fontWeight: 'bold', color: theme.colors.primary }}>app/(drawer)/index.jsx</Text>{' '}
               to customize the home screen and start building features.
             </Text>
             <Text variant="bodyMedium" style={styles.paragraph}>

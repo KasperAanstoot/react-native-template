@@ -1,5 +1,4 @@
 import { Drawer } from 'expo-router/drawer';
-import React from 'react';
 import { useTheme } from 'react-native-paper';
 
 export default function DrawerLayout() {

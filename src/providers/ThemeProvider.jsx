@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useContext, useMemo, useState } from 'react';
+import { createContext, useCallback, useContext, useMemo, useState } from 'react';
 import { useColorScheme } from 'react-native';
 import {
   MD3DarkTheme,
@@ -12,16 +12,7 @@ import {
   ThemeProvider as NavigationThemeProvider,
 } from '@react-navigation/native';
 
-export type ThemePreference = 'system' | 'light' | 'dark';
-
-interface ThemeContextValue {
-  isDark: boolean;
-  themePreference: ThemePreference;
-  setThemePreference: (preference: ThemePreference) => void;
-  toggleTheme: () => void;
-}
-
-const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
+const ThemeContext = createContext();
 
 const { LightTheme: NavigationLightTheme, DarkTheme: NavigationAdaptedDarkTheme } = adaptNavigationTheme({
   reactNavigationLight: NavigationDefaultTheme,
@@ -46,9 +37,9 @@ const CombinedDarkTheme = {
   },
 };
 
-export function AppThemeProvider({ children }: React.PropsWithChildren) {
+export function AppThemeProvider({ children }) {
   const systemColorScheme = useColorScheme();
-  const [themePreference, setThemePreference] = useState<ThemePreference>('system');
+  const [themePreference, setThemePreference] = useState('system');
 
   const isDark = useMemo(() => {
     if (themePreference === 'system') {

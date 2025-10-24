@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 import { List, RadioButton, Text, useTheme } from 'react-native-paper';
 
@@ -9,7 +8,7 @@ export default function SettingsScreen() {
   const theme = useTheme();
   const { themePreference, setThemePreference } = useThemePreferences();
 
-  const handleChange = (value: string) => {
+  const handleChange = (value) => {
     if (value === 'system' || value === 'light' || value === 'dark') {
       setThemePreference(value);
     }
