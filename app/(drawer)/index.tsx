@@ -12,6 +12,7 @@ export default function HomeScreen() {
   return (
     <Screen>
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+        <Text style={[styles.logo, { color: theme.colors.primary }]}>Expo Router Template</Text>
         <Card style={styles.card}>
           <Card.Title title="Expo Router Template" subtitle="React Native Paper + Drawer navigation" />
           <Card.Content>
@@ -52,6 +53,12 @@ const styles = StyleSheet.create({
   content: {
     padding: 24,
     gap: 16,
+  },
+  logo: {
+    fontFamily: 'LuckiestGuy-Regular',
+    fontSize: 32,
+    textAlign: 'center',
+    marginBottom: 8,
   },
   card: {
     borderRadius: 16,
