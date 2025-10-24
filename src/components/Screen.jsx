@@ -1,12 +1,7 @@
-import React, { PropsWithChildren } from 'react';
-import { SafeAreaView, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { useTheme } from 'react-native-paper';
 
-interface ScreenProps extends PropsWithChildren {
-  style?: StyleProp<ViewStyle>;
-}
-
-export function Screen({ children, style }: ScreenProps) {
+export function Screen({ children, style }) {
   const theme = useTheme();
 
   return (

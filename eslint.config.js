@@ -1,17 +1,15 @@
 import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactNative from 'eslint-plugin-react-native';
 
-export default tseslint.config(
+export default [
   {
     ignores: ['babel.config.js'],
   },
   js.configs.recommended,
-  ...tseslint.configs.recommended,
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{js,jsx}'],
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
@@ -26,6 +24,8 @@ export default tseslint.config(
     },
     rules: {
       'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-react': 'off',
+      'react/jsx-uses-vars': 'error',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
       'react-native/no-unused-styles': 'warn',
@@ -37,5 +37,5 @@ export default tseslint.config(
         version: 'detect',
       },
     },
-  }
-);
+  },
+];
