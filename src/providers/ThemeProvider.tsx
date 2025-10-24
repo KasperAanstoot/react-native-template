@@ -11,6 +11,7 @@ import {
   DefaultTheme as NavigationDefaultTheme,
   ThemeProvider as NavigationThemeProvider,
 } from '@react-navigation/native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export type ThemePreference = 'system' | 'light' | 'dark';
 
@@ -80,7 +81,10 @@ export function AppThemeProvider({ children }: React.PropsWithChildren) {
 
   return (
     <ThemeContext.Provider value={contextValue}>
-      <PaperProvider theme={paperTheme}>
+      <PaperProvider
+        theme={paperTheme}
+        settings={{ icon: (props) => <MaterialCommunityIcons {...props} /> }}
+      >
         <NavigationThemeProvider value={navigationTheme}>{children}</NavigationThemeProvider>
       </PaperProvider>
     </ThemeContext.Provider>
