@@ -10,7 +10,7 @@ navigation drawer.
 ## Features
 
 - Expo Router file-system routing with a Drawer navigator layout.
-- Material Design 3 UI primitives via React Native Paper.
+- Material Design 3 UI primitives via React Native Paper with MaterialCommunityIcons wired up as the default icon set.
 - Unified theming between React Native Paper and React Navigation with a system/light/dark preference toggle.
 - Modern JavaScript, ESLint, and sensible defaults to get productive quickly.
 
@@ -43,6 +43,7 @@ Replace the placeholder assets in `assets/` with your own icons and splash scree
 
 - Add new routes by creating files inside `app/(drawer)` or by nesting additional layouts.
 - Connect your favorite data fetching, state management, and testing libraries.
+- Swap out the default MaterialCommunityIcons mapping in `src/providers/ThemeProvider.jsx` if your design system relies on a different icon set.
 - Configure CI/CD workflows using Expo Application Services.
 
 Happy shipping!
